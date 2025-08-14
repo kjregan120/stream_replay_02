@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>YouTube Watch Logger — Settings</title>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 16px; }
+    h1 { font-size: 18px; margin: 0 0 12px; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    label { display: grid; gap: 6px; font-size: 13px; }
+    input { padding: 8px; border: 1px solid #ddd; border-radius: 6px; }
+    button { padding: 8px 10px; border-radius: 6px; border: 1px solid #ddd; background: #f8f8f8; cursor: pointer; }
+    button:hover { background: #f1f1f1; }
+    .note { color:#555; font-size: 12px; }
+    .row { display:flex; gap:8px; align-items:center; }
+    .ok { color: #0b7; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Settings</h1>
+    <div class="grid">
+      <label>Profile name
+        <input id="profile" placeholder="Child" />
+      </label>
+      <label>YouTube Data API key
+        <input id="apiKey" placeholder="AIza..." />
+      </label>
+      <div class="row">
+        <button id="save">Save</button>
+        <span id="status" class="note"></span>
+      </div>
+      <div class="note">Data stays on this device. Only video metadata is requested from the official YouTube Data API.</div>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
